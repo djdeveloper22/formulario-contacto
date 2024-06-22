@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Contact form</title>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+    .karla-title {
+      font-family: "Karla", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+
+      &-text {
+        font-family: "Karla", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 200;
+        font-style: normal;
+      }
+    }
+
+    body {
+      background-color: #e2f1e7ff;
+
+      main {
+        height: 97dvh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+
+        section {
+          background-color: rgb(255, 255, 255);
+          padding: 2rem;
+          min-width: 340px;
+          max-width: 700px;
+          height: auto;
+          border-radius: 1rem;
+
+          form {
+            input,
+            textarea {
+              border: 1px solid #036839 !important;
+            }
+
+            .border-model-check {
+              border: 1px solid #036839;
+              border-radius: 5px;
+            }
+          }
+        }
+      }
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    /* 
+      clases validaciones
+      is-invalid
+      is-valid
+    */
+  </style>
+</head>
+<body>
+  <main>
+    <section>
+      <h3 class="karla-title">Contact Us</h3>
+      <form class="karla-text">
+        <div class="d-md-flex gap-3">
+          <div class="mb-3 flex-grow-1">
+            <label for="firstName" class="form-label">First Name <span style="color: #5ead79;">*</span></label>
+            <input type="text" class="form-control py-2 py-md-3" id="firstName">
+            <div class="invalid-feedback">
+              This field is required
+            </div>
+            <div class="valid-feedback">Looks good!</div>
+          </div>
+          <div class="mb-3 flex-grow-1">
+            <label for="lastName" class="form-label">Last Name <span style="color: #5ead79;">*</span></label>
+            <input type="text" class="form-control py-2 py-md-3" id="lastName">
+            <div class="invalid-feedback">
+              This field is required
+            </div>
+            <div class="valid-feedback">Looks good!</div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="emailAddress" class="form-label">Email address <span style="color: #5ead79;">*</span></label>
+          <input type="email" class="form-control py-2 py-md-3" id="emailAddress" aria-describedby="emailHelp">
+          <div class="invalid-feedback">
+            This field is required
+          </div>
+          <div class="valid-feedback">Looks good!</div>
+        </div>
+        <label class="form-label">Query Type <span style="color: #5ead79;">*</span></label>
+        <div class="d-sm-flex gap-3">
+          <div class="mb-3 form-check border-model-check flex-grow-1 py-2 py-md-3">
+            <input type="checkbox" class="form-check-input mx-2" id="generalEnquiry">
+            <label class="form-check-label" for="generalEnquiry">General Enquiry</label>
+          </div>
+          <div class="mb-3 form-check border-model-check flex-grow-1 py-2 py-md-3">
+            <input type="checkbox" class="form-check-input mx-2" id="supportRequest">
+            <label class="form-check-label" for="supportRequest">Support Request</label>
+          </div>
+        </div>
+        <div class="mb-4">
+          <label class="form-label">Message<span style="color: #5ead79;">*</span></label>
+          <textarea class="form-control" style="height: 200px;" rows="3"></textarea>
+        </div>
+        <div class="invalid-feedback">
+          This field is required
+        </div>
+        <div class="valid-feedback">Looks good!</div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="supportRequest">
+          <label class="form-check-label" for="supportRequest">I consent to being contacted by the team
+            To submit this form, please consent to being contacted by the team</label>
+        </div>
+        <button type="submit" class="btn btn-success w-100 py-2 py-md-3 mt-3" disabled="true">Submit</button>
+      </form>
+    </section>
+  </main>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="#">djdeveloper22</a>.
+  </footer>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="ruta-a-tu-carpeta/popper.min.js"></script>
+  <script src="ruta-a-tu-carpeta/bootstrap.min.js"></script>
+</body>
+
+</html>
